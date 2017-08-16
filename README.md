@@ -6,7 +6,7 @@ A Laravel 5.4+ package for a theme based design.
 
 ----------
 
-Install
+Installation
 -------
 The preferred way of installing is through composer
 
