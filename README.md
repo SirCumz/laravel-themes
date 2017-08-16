@@ -1,6 +1,6 @@
 laravel-modular!
 ===================
-[![Latest Stable Version](https://poser.pugx.org/sircumz/laravel-themes/v/stable)](https://packagist.org/packages/SirCumz/laravel-themes) [![Total Downloads](https://poser.pugx.org/SirCumz/laravel-themes/downloads)](https://packagist.org/packages/SirCumz/laravel-themes) [![Latest Unstable Version](https://poser.pugx.org/SirCumz/laravel-themes/v/unstable)](https://packagist.org/packages/SirCumz/laravel-themes) [![License](https://poser.pugx.org/SirCumz/laravel-themes/license)](https://packagist.org/packages/SirCumz/laravel-themes)
+[![Latest Stable Version](https://poser.pugx.org/sircumz/laravel-themes/v/stable)](https://packagist.org/packages/sircumz/laravel-themes) [![Total Downloads](https://poser.pugx.org/sircumz/laravel-themes/downloads)](https://packagist.org/packages/sircumz/laravel-themes) [![Latest Unstable Version](https://poser.pugx.org/sircumz/laravel-themes/v/unstable)](https://packagist.org/packages/sircumz/laravel-themes) [![License](https://poser.pugx.org/sircumz/laravel-themes/license)](https://packagist.org/packages/sircumz/laravel-themes)
 
 A Laravel 5.4+ package for a theme based design.
 
