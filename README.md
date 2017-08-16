@@ -10,7 +10,7 @@ Installation
 -------
 The preferred way of installing is through composer
 
-    composer require SirCumz/laravel-themes
+    composer require sircumz/laravel-themes
 
 Add the service provider to config/app.php:
 
