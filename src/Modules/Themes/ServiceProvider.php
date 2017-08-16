@@ -45,5 +45,18 @@ class ServiceProvider extends ModuleServiceProvider
             return new FileViewFinder($app['files'], $app['config']['view.paths']);
         });   
 
+        // Compose components to make sure that the HtmlAttributes object is always available
+        $this->app['view']->composer('*component.*', function ($view) 
+        {
+            if(!isset($view->attributes))
+            {
+                $view->attributes = attributes();
+            }
+            elseif( is_array($view->attributes)  )
+            {
+                $view->attributes = attributes($view->attributes);
+            }
+        });      
+
     }
 }

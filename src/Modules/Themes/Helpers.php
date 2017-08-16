@@ -1,4 +1,5 @@
 <?php
+
 if(!function_exists("themes_path")) {
     function themes_path($path = '') {
         return app_path('Themes').($path ? DIRECTORY_SEPARATOR.$path : $path);
@@ -31,4 +32,10 @@ if(!function_exists("get_theme")) {
     function get_theme() {
         return config('Themes.theme', 'default');
     }
+}
+
+if(!function_exists("attributes")) {
+    function attributes($attr = []){
+        return new \App\Modules\Themes\HtmlAttributes($attr);
+    }    
 }
