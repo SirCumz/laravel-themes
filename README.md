@@ -16,7 +16,7 @@ Add the service provider to config/app.php:
 
     SirCumz\LaravelModular\LaravelThemesServiceProvider::class
 
-Publish the package..
+Publish the package
 
     php artisan vendor:publish --tag=themes
 
