@@ -1,0 +1,142 @@
+@import "node_modules/bootstrap-sass/assets/stylesheets/bootstrap/mixins";
+
+$bg-body:                    #eeeeee;
+$navbar-color:               #2196f3;
+$navbar-text-color:          #ffffff;
+$border-color:               #cccccc;
+$input-placeholder:          #cccccc;
+
+
+html {
+
+}
+
+body {
+    background-color:$bg-body;
+    padding-top:50px;
+    overflow:auto;
+}
+
+::-webkit-input-placeholder { 
+    color: $input-placeholder;
+}
+
+:-moz-placeholder { /* Mozilla Firefox 4 to 18 */
+    color: $input-placeholder;
+}
+
+::-moz-placeholder { /* Mozilla Firefox 19+ */
+    color: $input-placeholder;
+}
+
+:-ms-input-placeholder { /* Internet Explorer 10+ */
+    color: $input-placeholder;
+}
+
+
+/*-------------------------------------------------
+|           Navbar fixed Top
+|-------------------------------------------------*/
+.navbar-default {
+    @include gradient-vertical(lighten($navbar-color, 15%), $navbar-color);    
+    border-color: darken($navbar-color, 0%);
+}
+
+.navbar-default .navbar-toggle {
+    background-color: lighten($navbar-color, 15%);
+    border-color: darken($navbar-color, 20%);
+}
+
+.navbar-default .navbar-toggle .icon-bar {
+    background-color: darken($navbar-color, 20%);
+}
+
+.navbar-default .navbar-toggle:hover, 
+.navbar-default .navbar-toggle:focus {
+    background-color: lighten($navbar-color, 20%);
+}
+
+.navbar-default .navbar-nav > li > a,
+.navbar-default .navbar-brand {
+    color: $navbar-text-color!important;
+}
+
+@media (max-width: 767px) {
+
+    .navbar-default .navbar-nav .open .dropdown-menu > li > a {
+        color: $navbar-text-color;
+    }
+
+    .navbar-default .navbar-nav .open .dropdown-menu > li > a:hover, 
+    .navbar-default .navbar-nav .open .dropdown-menu > li > a:focus {
+        color: $navbar-text-color;
+    }    
+
+    .dropdown-menu .divider {
+        background-color: lighten($navbar-color, 20%);
+    }    
+}
+
+.navbar-default .navbar-nav > .open > a, 
+.navbar-default .navbar-nav > .open > a:hover, 
+.navbar-default .navbar-nav > .open > a:focus,
+.navbar-default .navbar-nav > .active > a, 
+.navbar-default .navbar-nav > .active > a:hover, 
+.navbar-default .navbar-nav > .active > a:focus {
+    color: $navbar-text-color!important;
+    background-color: lighten($navbar-color, 20%);
+}
+
+.navbar-default .navbar-nav > li > a:hover, 
+.navbar-default .navbar-nav > li > a:focus {
+    color: $navbar-text-color!important;
+    background-color: transparent;
+}
+
+.navbar-default .navbar-collapse, 
+.navbar-default .navbar-form {
+    border-color: transparent;
+}
+
+.navbar-default li > a > img {
+    margin-right: 5px;
+    margin-top: -6px;
+    float: left;
+    width: 32px;
+}
+
+.content {
+    padding-top: 30px;
+    margin:0 auto;
+}
+
+.loading {
+    position:absolute;
+    top:0;
+    right:0;
+    bottom:0;
+    left:0;
+    background-color:#000;
+    opacity:.8;
+    z-index:1028;
+}
+
+.loader {
+    display:block;
+    position: absolute;
+    top:50%;
+    left:50%;
+    margin-top:-60px;
+    margin-left:-60px;
+    border: 16px solid #f3f3f3; /* Light grey */
+    border-top: 16px solid #3498db; /* Blue */
+    border-radius: 50%;
+    width: 120px;
+    height: 120px;
+    animation: spin 2s linear infinite;
+}
+
+@keyframes spin {
+    0% { transform: rotate(0deg); }
+    100% { transform: rotate(360deg); }
+}

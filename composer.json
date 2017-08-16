@@ -1,0 +1,22 @@
+{
+    "name": "SirCumz/laravel-themes",
+    "description": "A Laravel 5.4 package for a theme based design.",    
+    "keywords": ["laravel", "themes"],
+    "homepage": "https://github.com/SirCumz/laravel-themes",
+    "license": "MIT",  
+    "authors": [
+        {
+            "name": "Tjip Kloosterman",
+            "email": "jefferso_83@hotmail.com"
+        }
+    ],         
+    "require": {
+        "php": "^5.4 || ^7.0",
+        "SirCumz/laravel-modular": "0.0.*"
+    },    
+    "autoload": {     
+        "psr-4" : {
+            "SirCumz\\LaravelThemes\\" : "src"
+        }
+    }  
+}
