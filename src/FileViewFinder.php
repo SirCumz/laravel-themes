@@ -1,6 +1,6 @@
 <?php
 
-namespace App\Modules\Themes;
+namespace SirCumz\LaravelThemes;
 
 use Illuminate\View\FileViewFinder as BaseFileViewFinder;
 
@@ -18,7 +18,7 @@ class FileViewFinder extends BaseFileViewFinder
      */
     protected function findInPaths($name, $paths)
     {  
-        $theme = config('Themes.theme');
+        $theme = config('theme.theme');
 
         foreach ((array) $paths as $path) {
 
@@ -31,6 +31,24 @@ class FileViewFinder extends BaseFileViewFinder
         }
 
         throw new \InvalidArgumentException("View [$name] not found.");
+    }
+
+    /**
+     * Replace the namespace hints for the given namespace.
+     *
+     * @param  string  $namespace
+     * @param  string|array  $hints
+     * @return void
+     */
+    public function replaceNamespace($namespace, $hints)
+    {
+        $hints = (array) $hints;
+
+        if($namespace == 'errors') {
+            array_unshift( $hints, themes_path('{theme}/errors'), themes_path('default/errors') );
+        }
+
+        $this->hints[$namespace] = $hints;
     }
 
 }

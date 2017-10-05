@@ -1,6 +1,6 @@
 <?php
 
-namespace App\Modules\Themes;
+namespace SirCumz\LaravelThemes;
 
 use Illuminate\Support\Fluent;
 
